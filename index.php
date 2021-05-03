@@ -63,7 +63,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Quarto Sound</h5>
             <p>Excelente quarto, feito para apreciar o conforto e um som ambiente</p>
-            <button class="btnReservar">Reservar</button>
+            <a class="btnReservar" href="suiteSound.php">Reservar</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -71,7 +71,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Quarto Dream</h5>
             <p>Excelente quarto, feito para um maravilhoso sono</p>
-            <button class="btnReservar">Reservar</button>
+            <a class="btnReservar" href="suiteDream.php">Reservar</a>
           </div>
         </div>
       </div>
