@@ -1,0 +1,459 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "samarkan";
+  src: url("../samarkan.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* HEAD ------------------------------------------------------------------------ */
+
+.head {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "menu login";
+  background: url(../img/tajMahal3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* .menu {grid-area: menu;} */
+.login {
+  grid-area: login;
+}
+
+.fontLogin {
+  float: right;
+  margin: 5%;
+  cursor: pointer;
+  color: white;
+}
+
+.fontLogin:hover {
+  color: #bb9c57;
+}
+
+.popLogin {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 230px;
+  height: 230px;
+  background-color: white;
+}
+
+.formLogin {
+  margin-top: 20px;
+}
+
+.btnLogin {
+  margin-left: 16px;
+  background-color: #bb9c57;
+  color: white;
+}
+
+.btnLogin:hover {
+  background-color: #d3b167;
+}
+
+@media (max-width: 780px) {
+  .head {
+    background: url(../img/tajMahalApp.jpg) center no-repeat;
+  }
+}
+
+.modoApp {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .modoApp {
+    display: contents;
+    width: 100%;
+    height: auto;
+    grid-template-areas:
+      "tituloApp"
+      "imgApp"
+      "textoApp";
+
+    justify-items: center;
+    text-align: center;
+  }
+
+  .tituloApp {
+    grid-area: tituloApp;
+  }
+  .imgApp {
+    grid-area: imgApp;
+  }
+  .textoApp {
+    grid-area: textoApp;
+  }
+
+  .tituloApp {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #d3b167;
+    margin: 40px auto;
+  }
+
+  .imgApp img {
+    width: 100%;
+  }
+
+  .textoApp,
+  .tituloFirst2 {
+    margin: 20px auto;
+    font-weight: 400;
+    color: #d3b167;
+  }
+}
+
+.historyGandhi {
+  grid-template-columns: 600px 1fr 1fr;
+  grid-template-areas: "gandhi textGandhi link";
+}
+
+.fundoGandhi {
+  background: url("../img/fundo01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.historyContainer {
+  grid-template-columns: 600px 1fr 1fr;
+  grid-template-areas: "anima culture enfeites";
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.grid2 {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  height: 40vh;
+}
+
+.fundoFooter {
+  background-color: #d4d4cb;
+}
+
+.container2 {
+  width: 100%;
+  margin: 40px auto;
+  height: 100vh;
+  text-align: center;
+  font-family: lato;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+  height: 100vh;
+}
+
+.flex01 {
+  flex: 1;
+  margin: auto;
+}
+
+.footer {
+  grid-template-areas: "email contatos midia";
+}
+
+.email {
+  grid-area: email;
+}
+.contatos {
+  grid-area: contatos;
+}
+.midia {
+  grid-area: midia;
+}
+
+.galeria {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fotos {
+  font-family: samarkan;
+  font-size: 68px;
+}
+
+.container2 h2 {
+  color: #444;
+  font-size: 68px;
+  padding-top: 20px;
+}
+
+.container2 h4 {
+  margin-bottom: 20px;
+}
+
+.carousel-caption h5 {
+  color: orange;
+  font-family: lato;
+  font-size: 48px;
+}
+
+.btnReservar {
+  background: none;
+  border: 1px solid white;
+  padding: 10px 60px;
+  color: white;
+  cursor: pointer;
+}
+
+.btnReservar:hover {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.fundoHistory {
+  background: url("../img/fundo.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.gandhi {
+  grid-area: gandhi;
+  height: 100vh;
+}
+
+.textGandhi {
+  grid-area: textGandhi;
+}
+
+.link {
+  grid-area: link;
+}
+
+.anima {
+  grid-area: anima;
+  justify-self: center;
+}
+.culture {
+  grid-area: culture;
+}
+
+.enfeites {
+  grid-area: enfeites;
+  text-align: right;
+}
+
+.gif {
+  width: 500px;
+  margin-top: 25%;
+}
+
+.gandhiImg {
+  float: left;
+  max-width: 110%;
+  margin-top: 49%;
+}
+
+.culture h1 {
+  font-family: samarkan;
+  font-size: 100px;
+  margin-top: 45%;
+  color: white;
+}
+
+.culture2 h1 {
+  font-family: samarkan;
+  font-size: 100px;
+  margin-top: 40%;
+  color: white;
+}
+
+.cultureText {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.textCult {
+  color: white;
+  font-family: lato;
+  overflow-y: scroll;
+  height: 150px;
+}
+
+.textCult2 {
+  color: white;
+  font-family: lato;
+  overflow-y: scroll;
+  height: 245px;
+}
+
+.textCult2::-webkit-scrollbar {
+  width: 2px;
+}
+
+.textCult2::-webkit-scrollbar-track {
+  background: white;
+}
+
+.textCult2::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+
+.textCult::-webkit-scrollbar {
+  width: 2px;
+}
+
+.textCult::-webkit-scrollbar-track {
+  background: white;
+}
+
+.textCult::-webkit-scrollbar-thumb {
+  background-color: #118806;
+}
+
+.icons {
+  margin-top: 30px;
+}
+
+.icons i {
+  color: white;
+  cursor: pointer;
+  padding: 0 14px;
+}
+
+.icons i:hover {
+  color: #118806;
+}
+
+.information {
+  float: right;
+  font-family: lato;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 94vh;
+  margin-right: 5%;
+  position: relative;
+  cursor: pointer;
+}
+
+.information2 {
+  font-family: lato;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 95vh;
+  margin-right: 5%;
+  position: relative;
+  cursor: pointer;
+}
+
+.information:hover {
+  color: orange;
+}
+
+.information2:hover {
+  color: #118806;
+}
+
+.display {
+  display: none;
+}
+
+.transicao {
+  width: 100%;
+  text-align: center;
+  margin: 80px auto;
+  color: orange;
+}
+
+.spa {
+  color: orange;
+  margin: 10px auto;
+}
+
+/* Forms reserva ----------------------------------------------------------------------------*/
+
+.containerSuite {
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 
+    "logoHotel"
+    "formHotel";
+  justify-items: center;
+}
+
+.logoHotel {grid-area: logoHotel;}
+.formHotel {grid-area: formHotel;}
+
+.form-row {
+  margin-top: 10px;
+}
+
+.suite {
+  margin-top: 3.2%;
+}
+
+.btnSuiteReservar {
+  background-color: #D3B167;
+  color: white;
+  font-weight: 600;
+  text-align: right;
+  padding: 15px 40px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.btnVoltar {
+  float: right;
+  margin-top: -4.5%;
+}
+
+/* Página CLiente ----------------------------------------------------------------------------*/
+
+.clienteheader {
+  justify-content: center;
+  display: flex;
+}
+
+.imgLogoCliente {
+  margin: 40px;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #555;
+  height: 80px;
+}
+
+.navegacao > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+.navegacao > a.vermelho {background-color: #f44336;}
+
+.usuario {
+  flex-grow: 1;
+  justify-self: flex-start;
+  color: #eee;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
