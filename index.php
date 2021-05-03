@@ -41,7 +41,9 @@
 
   <section class="container container2">
     <h2>Hotel Mahal</h2>
-    <i class="spa fas fa-2x fa-spa"></i>
+
+      <i class="spa fas fa-2x fa-spa"></i>
+
     <h4>Conheça nossos quartos</h4>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -55,7 +57,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Quarto Palace</h5>
             <p>Excelente quarto, feito para um rei</p>
-            <a class="btnReservar" href="suitePalace.php">Reservar</a>
+            <a class="btnReservar" href="./suitePalace.php">Reservar</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -63,7 +65,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Quarto Sound</h5>
             <p>Excelente quarto, feito para apreciar o conforto e um som ambiente</p>
-            <a class="btnReservar" href="suiteSound.php">Reservar</a>
+            <a class="btnReservar" href="./suiteSound.php">Reservar</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -71,7 +73,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Quarto Dream</h5>
             <p>Excelente quarto, feito para um maravilhoso sono</p>
-            <a class="btnReservar" href="suiteDream.php">Reservar</a>
+            <a class="btnReservar" href="./suiteDream.php">Reservar</a>
           </div>
         </div>
       </div>
@@ -86,7 +88,131 @@
     </div>
   </section>
 
-  <div class="transicao">
+  <!-- Modo App -------------------------------------------------------------------------------------------------------- -->
+
+
+
+  <div class="modoApp">
+
+    <div class="tituloApp">
+
+      <h2 class="SuitePrincipal2">Suíte Palace</h2>
+
+    </div>
+    <div class="imgApp">
+
+      <img src="./img/quartoPrincipalApp.jpg" alt="Suite Palace">
+
+    </div>
+    <div class="textoApp">
+
+      <p class="textFirst2">
+        TV de LCD com sistema multicanal,
+        Cachoeira, Piscina térmica, Sauna,
+        Hidromassagem, Ar condicionado,
+        Teto solar móvel, Ducha dupla, Equip c/som individual,
+        Frigobar e Garagem privativa para 02 autos.
+      </p>
+      <h3 class="tituloPreco2"> Preços </h3>
+      <p class="textPreco2">
+        U$ 1.000 por noite.
+      </p>
+      <p class="textPreco2.1">
+        Incluso café da manhã e almoço.
+      </p>
+      <p class="textPreco3.1">
+        Jantar temos um restaurante e na região temos
+        restaurantes famosos, com renomados chefes de
+        5 estrelas michelin.
+      </p>
+
+      <a class="btnReservar2" href="./suitePalace.php">Reservar</a>
+    </div>
+  </div>
+  <div class="modoApp dreamApp">
+
+    <div class="tituloApp">
+
+      <h2 class="SuitePrincipal2">Suíte Dream</h2>
+
+    </div>
+    <div class="imgApp">
+
+      <img src="./img/quartoDreamApp.jpg" alt="Suíte Dream">
+
+    </div>
+    <div class="textoApp">
+
+      <p class="textFirst2">
+        TV de LCD com sistema multicanal,
+        Cachoeira, Piscina térmica, Sauna,
+        Hidromassagem, Ar condicionado,
+        Teto solar móvel, Ducha dupla, Equip c/som individual,
+        Frigobar e Garagem privativa para 02 autos.
+      </p>
+      <h3 class="tituloPreco2"> Preços </h3>
+      <p class="textPreco2">
+        U$ 1.000 por noite.
+      </p>
+      <p class="textPreco2.1">
+        Incluso café da manhã e almoço.
+      </p>
+      <p class="textPreco3.1">
+        Jantar temos um restaurante e na região temos
+        restaurantes famosos, com renomados chefes de
+        5 estrelas michelin.
+      </p>
+
+      <a class="btnReservar2" href="./suiteDream.php">Reservar</a>
+
+    </div>
+
+  </div>
+
+  <div class="modoApp soundApp">
+
+    <div class="tituloApp">
+
+      <h2 class="SuitePrincipal2">Suíte sound</h2>
+
+    </div>
+
+    <div class="imgApp">
+
+      <img src="./img/quartoSonhoApp.jpg" alt="Suíte Sound">
+
+    </div>
+
+    <div class="textoApp">
+
+      <p class="textFirst2">
+        TV de LCD com sistema multicanal,
+        Cachoeira, Piscina térmica, Sauna,
+        Hidromassagem, Ar condicionado,
+        Teto solar móvel, Ducha dupla, Equip c/som individual,
+        Frigobar e Garagem privativa para 02 autos.
+      </p>
+      <h3 class="tituloPreco2"> Preços </h3>
+      <p class="textPreco2">
+        U$ 1.000 por noite.
+      </p>
+      <p class="textPreco2.1">
+        Incluso café da manhã e almoço.
+      </p>
+      <p class="textPreco3.1">
+        Jantar temos um restaurante e na região temos
+        restaurantes famosos, com renomados chefes de
+        5 estrelas michelin.
+      </p>
+
+      <a class="btnReservar2" href="./suiteSound.php">Reservar</a>
+
+    </div>
+
+  </div>
+  <!-- Fim App ---------------------------------------------------------------------------------------------------------------- -->
+
+  <div class="transicao transicaoApp">
 
     <i class="fas fa-2x fa-spa"></i>
     <i class="fas fa-2x fa-spa"></i>
@@ -135,7 +261,7 @@
 
   </section>
 
-  <section class="historyContainer grid fundoHistory">
+  <section class="historyContainer grid fundoHistory historyApp">
 
     <div class="anima">
       <img class="gif" src="https://media.giphy.com/media/hrvRWTclUe0AxDDeTY/giphy.gif" alt="">
@@ -179,7 +305,7 @@
 
   </section>
 
-  <div class="transicao">
+  <div class="transicao transicaoApp">
 
     <i class="fas fa-2x fa-spa"></i>
     <i class="fas fa-2x fa-spa"></i>
@@ -187,11 +313,11 @@
 
   </div>
 
-  <div class="galeria">
+  <div class="galeria galeriaApp">
     <h2 class="fotos">Galeria</h2>
   </div>
 
-  <div class="transicao">
+  <div class="transicao transicaoApp">
 
     <i class="fas fa-2x fa-spa"></i>
     <i class="fas fa-2x fa-spa"></i>
@@ -199,7 +325,7 @@
 
   </div>
 
-  <section class="flex">
+  <section class="flex galeriaApp">
 
     <div class="flex01">
       <img src="./img/foto.jpg" alt="">

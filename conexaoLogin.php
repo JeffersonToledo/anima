@@ -1,7 +1,7 @@
 <?php
 
     $banco = 'LoginHotel';
-    $servidor = '127.0.0.1:3306';
+    $servidor = '127.0.0.1:3307';
     $usuario = 'root';
     $senha = 'root';
 

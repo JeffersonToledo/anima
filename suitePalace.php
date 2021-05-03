@@ -1,52 +1,90 @@
+<?php 
+ini_set('display_errors', 0 );
+error_reporting(0);
+?>
+
 <?php
 
-if(count($_POST)) {
+if (count($_POST)) {
 
-$dados = $_POST;
+    $dados = $_POST;
 
-$erros = [];
+    $erros = [];
 
-if(trim($dados['nome']) === "") {
+    if (trim($dados['nome']) === "") {
 
-    $erros['nome'] = 'Nome é obrigatório';
-}
-
-
-if(!filter_var($dados['email'], FILTER_VALIDATE_EMAIL)) {
-    $erros['email'] = 'Email inválido';
-}
-
-if($_POST['nascimento'] === '') {
-
-    $erros['nascimento'] = 'Preencha uma data';
-}else {
-    $inteiro = intval($_POST['nascimento']);
-
-    if($inteiro > 2004) {
-        $erros['nascimento'] =  'Você é menor de idade! Não pode alugar um quarto';
+        $erros['nome'] = 'Nome é obrigatório';
     }
 
-}
+    if (trim($dados['cpf']) === "") {
+
+        $erros['cpf'] = 'CPF é obrigatório';
+    }
 
 
-if($_POST['data'] === '') {
+    if (!filter_var($dados['email'], FILTER_VALIDATE_EMAIL)) {
+        $erros['email'] = 'Email inválido';
+    }
 
-    $erros['data'] = 'Preencha uma data Inicial';
-};
+    if (isset($_POST['nascimento']) === '') {
 
-if($_POST['data2'] === '') {
+        $erros['nascimento'] = 'Preencha uma data';
+    } else {
+        $inteiro = intval($_POST['nascimento']);
 
-    $erros['data2'] = 'Preencha uma data Final';
-};
-
-if (!count($erros)) {
-    echo "<script language='javascript' type='text/javascript'>
-         alert('Reserva feita com sucesso');window.location.href='palace.php';</script>";
-}
+        if ($inteiro > 2004) {
+            $erros['nascimento'] =  'Você é menor de idade! Não pode alugar um quarto';
+        }
+    }
 
 
-}else {
-// echo "<h1>Preencha todo o formulário</h1>";
+    if (isset($_POST['data']) === '') {
+
+        $erros['data'] = 'Preencha uma data Inicial';
+    };
+
+    if (isset($_POST['data2']) === '') {
+
+        $erros['data2'] = 'Preencha uma data Final';
+    };
+
+    if (!count($erros)) {
+
+        require_once "./conexao.php";
+
+
+        $sql = "INSERT INTO cadastro 
+            (nome, cpf, nascimento, email, filhos, pessoas, dataInicial, dataFinal, celular, quartos, suite)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Suíte Palace')";
+
+        $conexao = novaConexao();
+        $stmt = $conexao->prepare($sql);
+
+        $params = [
+            $dados['nome'],
+            $dados['cpf'],
+            $dados['nascimento'],
+            $dados['email'],
+            $dados['filhos'],
+            $dados['pessoas'],
+            $dados['data'],
+            $dados['data2'],
+            $dados['celular'],
+            $dados['quartos'],
+        ];
+
+
+
+        $stmt->bind_param("ssssiisssi", ...$params); // s - string (nome, data, email, site), i - inteiro (filhos).
+
+        if ($stmt->execute()) {
+
+            unset($dados);
+
+            echo "<script language='javascript' type='text/javascript'>
+                    alert('Reserva feita com sucesso');window.location.href='index.php';</script>";
+        }
+    }
 }
 
 ?>
@@ -83,15 +121,14 @@ if (!count($erros)) {
 
         <div class="formHotel">
 
-            <form action="#" method="POST" id="myForm">
+            <form action="#" method="post" id="myForm">
 
                 <div class="form-row">
 
                     <div class="col-md-6">
 
                         <label for="nome">Nome</label>
-                        <input class="form-control <?= $erros['nome'] ? 'is-invalid' : '' ?>" type="text" name="nome"
-                            id="nome" placeholder="Nome" value="<?= $_POST['nome'] ?>">
+                        <input class="form-control <?= $erros['nome'] ? 'is-invalid' : '' ?>" type="text" name="nome" id="nome" placeholder="Nome" value="<?= $_POST['nome'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['nome'] ?></div>
 
@@ -100,8 +137,7 @@ if (!count($erros)) {
                     <div class="col-md-4">
 
                         <label for="cpf">CPF</label>
-                        <input class="form-control <?= $erros['cpf'] ? 'is-invalid' : '' ?>" type="text" name="cpf"
-                            id="cpf" placeholder="CPF - Somente os números" value="<?= $_POST['cpf'] ?>">
+                        <input class="form-control <?= $erros['cpf'] ? 'is-invalid' : '' ?>" type="text" name="cpf" id="cpf" placeholder="CPF - Somente os números" value="<?= $_POST['cpf'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['cpf'] ?></div>
 
@@ -110,9 +146,7 @@ if (!count($erros)) {
                     <div class="col-md-2">
 
                         <label for="nascimento">Nascimento</label>
-                        <input class="form-control <?= $erros['nascimento'] ? 'is-invalid' : '' ?>" type="date"
-                            name="nascimento" id="nascimento" placeholder="Nascimento"
-                            value="<?= $_POST['nascimento'] ?>">
+                        <input class="form-control <?= $erros['nascimento'] ? 'is-invalid' : '' ?>" type="date" name="nascimento" id="nascimento" placeholder="Nascimento" value="<?= $_POST['nascimento'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['nascimento'] ?></div>
 
@@ -125,8 +159,7 @@ if (!count($erros)) {
                     <div class="col-md-4">
 
                         <label for="email">E-mail</label>
-                        <input class="form-control <?= $erros['email'] ? 'is-invalid' : '' ?>" type="text" name="email"
-                            id="email" placeholder="E-mail" value="<?= $_POST['email'] ?>">
+                        <input class="form-control <?= $erros['email'] ? 'is-invalid' : '' ?>" type="text" name="email" id="email" placeholder="E-mail" value="<?= $_POST['email'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['email'] ?></div>
 
@@ -135,8 +168,7 @@ if (!count($erros)) {
                     <div class="col-md-2">
 
                         <label for="filhos">Filhos</label>
-                        <input class="form-control <?= $erros['filhos'] ? 'is-invalid' : '' ?>" type="number"
-                            name="filhos" id="filhos" placeholder="Filhos" value="<?= $_POST['filhos'] ?>">
+                        <input class="form-control <?= $erros['filhos'] ? 'is-invalid' : '' ?>" type="number" name="filhos" id="filhos" placeholder="Filhos" value="<?= $_POST['filhos'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['filhos'] ?></div>
 
@@ -145,8 +177,7 @@ if (!count($erros)) {
                     <div class="col-md-2">
 
                         <label for="pessoas">Pessoas</label>
-                        <input class="form-control <?= $erros['pessoas'] ? 'is-invalid' : '' ?>" type="number"
-                            name="pessoas" id="pessoas" placeholder="Pessoas" value="<?= $_POST['pessoas'] ?>">
+                        <input class="form-control <?= $erros['pessoas'] ? 'is-invalid' : '' ?>" type="number" name="pessoas" id="pessoas" placeholder="Pessoas" value="<?= $_POST['pessoas'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['pessoas'] ?></div>
 
@@ -155,16 +186,14 @@ if (!count($erros)) {
                     <div class="col-md-2">
 
                         <label for="data">Data Inicial</label>
-                        <input class="form-control <?= $erros['data'] ? 'is-invalid' : '' ?>" type="date" name="data"
-                            id="data" placeholder="Data" value="<?= $_POST['data'] ?>">
+                        <input class="form-control <?= $erros['data'] ? 'is-invalid' : '' ?>" type="date" name="data" id="data" placeholder="Data" value="<?= $_POST['data'] ?>">
 
                     </div>
 
                     <div class="col-md-2">
 
                         <label for="data2">Data Final</label>
-                        <input class="form-control <?= $erros['data2'] ? 'is-invalid' : '' ?>" type="date" name="data2"
-                            id="data2" placeholder="Data Final" value="<?= $_POST['data2'] ?>">
+                        <input class="form-control <?= $erros['data2'] ? 'is-invalid' : '' ?>" type="date" name="data2" id="data2" placeholder="Data Final" value="<?= $_POST['data2'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['data2'] ?></div>
 
@@ -178,9 +207,7 @@ if (!count($erros)) {
 
                         <label for="celular">Celular</label>
 
-                        <input class="form-control <?= $erros['celular'] ? 'is-invalid' : '' ?>" type="text"
-                            name="celular" id="celular" placeholder="Celular - Somente os números"
-                            value="<?= $_POST['celular'] ?>">
+                        <input class="form-control <?= $erros['celular'] ? 'is-invalid' : '' ?>" type="text" name="celular" id="celular" placeholder="Celular - Somente os números" value="<?= $_POST['celular'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['celular'] ?></div>
 
@@ -190,9 +217,7 @@ if (!count($erros)) {
                     <div class="col-md-3">
 
                         <label for="quartos">Quartos</label>
-                        <input class="form-control <?= $erros['quartos'] ? 'is-invalid' : '' ?>" type="number"
-                            name="quartos" id="quartos" placeholder="Quantidade de quartos"
-                            value="<?= $_POST['quartos'] ?>">
+                        <input class="form-control <?= $erros['quartos'] ? 'is-invalid' : '' ?>" type="number" name="quartos" id="quartos" placeholder="Qts de quartos" value="<?= $_POST['quartos'] ?>">
 
                         <div class="invalid-feedback"><?= $erros['quartos'] ?></div>
 

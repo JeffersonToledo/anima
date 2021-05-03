@@ -2,7 +2,7 @@
 
 function novaConexao($banco = 'db_mahal') {
 
-    $servidor = '127.0.0.1:3306';
+    $servidor = '127.0.0.1:3307';
     $usuario = 'root';
     $senha = 'root';
 

@@ -12,7 +12,7 @@ body {
 /* HEAD ------------------------------------------------------------------------ */
 
 .head {
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   display: grid;
   grid-template-areas: "menu login";
@@ -41,7 +41,7 @@ body {
   top: 80px;
   right: 0;
   width: 230px;
-  height: 230px;
+  height: 250px;
   background-color: white;
 }
 
@@ -59,57 +59,8 @@ body {
   background-color: #d3b167;
 }
 
-@media (max-width: 780px) {
-  .head {
-    background: url(../img/tajMahalApp.jpg) center no-repeat;
-  }
-}
-
-.modoApp {
-  display: none;
-}
-
-@media (max-width: 780px) {
-  .modoApp {
-    display: contents;
-    width: 100%;
-    height: auto;
-    grid-template-areas:
-      "tituloApp"
-      "imgApp"
-      "textoApp";
-
-    justify-items: center;
-    text-align: center;
-  }
-
-  .tituloApp {
-    grid-area: tituloApp;
-  }
-  .imgApp {
-    grid-area: imgApp;
-  }
-  .textoApp {
-    grid-area: textoApp;
-  }
-
-  .tituloApp {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #d3b167;
-    margin: 40px auto;
-  }
-
-  .imgApp img {
-    width: 100%;
-  }
-
-  .textoApp,
-  .tituloFirst2 {
-    margin: 20px auto;
-    font-weight: 400;
-    color: #d3b167;
-  }
+.spa {
+  color: orange;
 }
 
 .historyGandhi {
@@ -129,14 +80,14 @@ body {
 
 .grid {
   display: grid;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   height: 100vh;
 }
 
 .grid2 {
   display: grid;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   height: 40vh;
 }
@@ -146,7 +97,7 @@ body {
 }
 
 .container2 {
-  width: 100%;
+  max-width: 100%;
   margin: 40px auto;
   height: 100vh;
   text-align: center;
@@ -157,7 +108,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 50%;
+  max-width: 50%;
   height: 100vh;
 }
 
@@ -167,6 +118,8 @@ body {
 }
 
 .footer {
+  max-width: 100%;
+  margin: auto;
   grid-template-areas: "email contatos midia";
 }
 
@@ -181,7 +134,7 @@ body {
 }
 
 .galeria {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -373,15 +326,10 @@ body {
   color: orange;
 }
 
-.spa {
-  color: orange;
-  margin: 10px auto;
-}
-
 /* Forms reserva ----------------------------------------------------------------------------*/
 
 .containerSuite {
-  max-width: 1200px;
+  max-width: 100%;
   height: 100vh;
   margin: auto;
   display: grid;
@@ -460,4 +408,113 @@ body {
   padding-left: 20px;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+/* Modo App ---------------------------------------------------------------------------------*/
+
+@media (max-width: 780px) {
+  .head {
+    background: url(../img/tajMahalApp.jpg) center no-repeat;
+  }
+}
+
+.modoApp {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .modoApp {
+    display: grid;
+    max-width: 100%;
+    height: 100%;
+    grid-template-areas:
+      "tituloApp"
+      "imgApp"
+      "textoApp";
+
+    justify-items: center;
+    text-align: center;
+  }
+
+  .tituloApp {
+    grid-area: tituloApp;
+  }
+  .imgApp {
+    grid-area: imgApp;
+  }
+
+  .textoApp {
+    grid-area: textoApp;
+  }
+
+  .tituloApp {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #d3b167;
+    margin: 40px auto;
+  }
+
+  .imgApp img {
+    width: 50%;
+  }
+
+  .textoApp {
+    max-width: 300px;
+    margin: 20px auto;
+    font-weight: 400;
+    color: #444;
+  }
+
+  .tituloPreco2 {
+    font-weight: 600;
+    color: #D3B167;
+  }
+
+  .btnReservar2 {
+    background: #D3B167;
+    border: none;
+    padding: 10px 60px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .historyGandhi {
+    display: none;
+  }
+
+  .historyApp {
+    display: none;
+  }
+
+  .transicaoApp {
+    display: none;
+  }
+
+  .galeriaApp {
+    display: none;
+  }
+
+  .container2 {
+    display: none;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .flex {
+    display: none;
+  }
+
+  .grid {
+    display: none;
+  }
+
+  .grid2 {
+    display: none;
+  }
 }
