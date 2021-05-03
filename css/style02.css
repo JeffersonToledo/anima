@@ -1,0 +1,27 @@
+.culture2 h1 {
+    font-family: samarkan;
+    font-size: 100px;
+    margin-top: 40%;
+    color: white;
+}
+  
+ 
+  
+.textCult2 {
+    color: white;
+    font-family: lato;
+    overflow-y: scroll;
+    height: 245px;
+}
+  
+.textCult2::-webkit-scrollbar {
+    width: 2px;
+}
+  
+.textCult2::-webkit-scrollbar-track {
+    background: white;
+}
+  
+.textCult2::-webkit-scrollbar-thumb {
+    background-color: #118806;
+}

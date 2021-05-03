@@ -88,9 +88,7 @@
     </div>
   </section>
 
-  <!-- Modo App -------------------------------------------------------------------------------------------------------- -->
-
-
+<!-- Modo App -------------------------------------------------------------------------------------------------------- -->
 
   <div class="modoApp">
 
@@ -210,7 +208,7 @@
     </div>
 
   </div>
-  <!-- Fim App ---------------------------------------------------------------------------------------------------------------- -->
+<!-- Fim App ---------------------------------------------------------------------------------------------------------------- -->
 
   <div class="transicao transicaoApp">
 
@@ -273,26 +271,19 @@
 
         <p class="textCult">
 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus ipsam harum consectetur sit beatae
-          perferendis dolore possimus culpa odit repudiandae numquam unde placeat, iste molestiae, laborum alias in
-          quis!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus ipsam harum consectetur sit beatae
-          perferendis dolore possimus culpa odit repudiandae numquam unde placeat, iste molestiae, laborum alias in
-          quis!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus ipsam harum consectetur sit beatae
-          perferendis dolore possimus culpa odit repudiandae numquam unde placeat, iste molestiae, laborum alias in
-          quis!
+        <iframe src="./holi.html" scrolling="no" name="icons" height="auto" width="100%" title="Iframe Example"></iframe>
 
         </p>
 
       </div>
       <div class="icons">
-        <i class="fas fa-2x fa-glass-cheers"></i>
-        <i class="fas fa-2x fa-hamsa"></i>
-        <i class="fas fa-2x fa-pepper-hot"></i>
-        <i class="fas fa-2x fa-fire"></i>
-        <i class="fas fa-2x fa-mosque"></i>
-        <i class="fas fa-2x fa-praying-hands"></i>
+        
+        <a href="./holi.html" target="icons"><i class="fas fa-glass-cheers"></i></a>
+        <a href="./religion.html" target="icons"><i class="fas fa-hamsa"></i></a>
+        <a href="./comida.html" target="icons"><i class="fas fa-pepper-hot"></i></a>
+        <a href="./espiritual.html" target="icons"><i class="fas fa-fire"></i></a>
+        <a href="./lugares.html" target="icons"><i class="fas fa-mosque"></i></a>
+        <a href="./peace.html" target="icons"><i class="fas fa-praying-hands"></i></a>
       </div>
 
     </div>
