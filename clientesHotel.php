@@ -159,7 +159,7 @@ if(!$_SESSION['usuario']){
 
                     <td>
                 
-                    <a href="http://localhost/mahal/clientesHotel.php?excluir=<?= $registro['id'] ?>"class="btn btn-danger">
+                    <a href="http://localhost/anima/clientesHotel.php?excluir=<?= $registro['id'] ?>"class="btn btn-danger">
                     
                         Excluir
                     

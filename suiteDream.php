@@ -33,12 +33,12 @@ if (count($_POST)) {
     }
 
 
-    if ($_POST['data'] === '') {
+    if (isset($_POST['data']) === '') {
 
         $erros['data'] = 'Preencha uma data Inicial';
     };
 
-    if ($_POST['data2'] === '') {
+    if (isset($_POST['data2']) === '') {
 
         $erros['data2'] = 'Preencha uma data Final';
     };
