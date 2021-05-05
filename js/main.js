@@ -84,3 +84,40 @@ $(document).ready(function () {
     },
   });
 });
+
+/* Modal Imagens -------------------------------------------------------------------------------------------*/
+
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var img2 = document.getElementById("myImg2");
+var modalImg2 = document.getElementById("img02");
+var captionText = document.getElementById("caption");
+var captionText2 = document.getElementById("caption2");
+
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+$('.flex #myImg2').each(function(index, element) {
+  // console.log(index + ' : ' + element.innerHTML);
+  this.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+    captionText2.innerHTML = this.alt;
+  }
+});
+
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+span2.onclick = function() { 
+  modal2.style.display = "none";
+}

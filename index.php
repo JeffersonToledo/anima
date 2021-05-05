@@ -319,31 +319,76 @@
   <section class="flex galeriaApp">
 
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg" src="./fotos/casal.jpg" alt="Casal Indiano">
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/child.jpg" alt="Criança indiana">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/child02.jpg" alt="Criança indiana">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/colorFest.jpg" alt="Festa colorida indiana">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/colorMan.jpg" alt="Homem pintado tirando foto">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/festColor2.jpg" alt="Festa colorida indiana">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/man.jpg" alt="Homem indiano de vestido laranja">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/temple.jpg" alt="Templo indiano com pessoas em volta">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
     <div class="flex01">
-      <img src="./img/foto.jpg" alt="">
+      <img id="myImg2" src="./fotos/way.jpg" alt="rua lotada indiana">
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02">
+        <div id="caption2"></div>
+      </div>
     </div>
   </section>
 
