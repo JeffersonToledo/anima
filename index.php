@@ -400,21 +400,78 @@
 
   </div>
 
-  <section class="footer grid2 fundoFooter">
+  <!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Hotel Mahal</h5>
 
-    <div class="email">
+        <p>
+          Caro cliente, é com grande alegria que agradecemos por depositar sua confiança em nosso 
+          trabalho e profissionalismo. Nos empenhamos ao máximo para alcançar a qualidade que você 
+          procura e é uma grande motivação ter a aprovação de clientes especiais como você.
+        </p>
+      </div>
+      <!--Grid column-->
 
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Hotéis</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Lugares</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Turismo</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Fotos</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Rede de Hotéis</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Mahal</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Indian</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Mahtama</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Shiva</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
     </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
 
-    <div class="contatos">
-
-    </div>
-
-    <div class="midia">
-
-    </div>
-
-  </section>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">hotelmahal.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
