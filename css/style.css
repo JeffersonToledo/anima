@@ -20,7 +20,7 @@ body {
   background-size: cover;
 }
 
-@media (max-width:1380px) {
+@media (max-width: 1380px) {
   .head {
     background-size: 100% 110%;
   }
@@ -316,17 +316,18 @@ iframe {
   margin-right: 5%;
   position: relative;
   cursor: pointer;
-  text-decoration:none; 
+  text-decoration: none;
 }
 
 .information:hover {
   color: orange;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-.information2:hover, a:link {
+.information2:hover,
+.enfeites a:link:hover {
   color: #118806;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .display {
@@ -347,14 +348,18 @@ iframe {
   height: 100vh;
   margin: auto;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "logoHotel"
     "formHotel";
   justify-items: center;
 }
 
-.logoHotel {grid-area: logoHotel;}
-.formHotel {grid-area: formHotel;}
+.logoHotel {
+  grid-area: logoHotel;
+}
+.formHotel {
+  grid-area: formHotel;
+}
 
 .form-row {
   margin-top: 10px;
@@ -369,7 +374,7 @@ iframe {
   height: auto;
 }
 .btnSuiteReservar {
-  background-color: #D3B167;
+  background-color: #d3b167;
   color: white;
   font-weight: 600;
   text-align: right;
@@ -413,7 +418,9 @@ iframe {
   margin-right: 20px;
 }
 
-.navegacao > a.vermelho {background-color: #f44336;}
+.navegacao > a.vermelho {
+  background-color: #f44336;
+}
 
 .usuario {
   flex-grow: 1;
@@ -481,15 +488,33 @@ iframe {
 
   .tituloPreco2 {
     font-weight: 600;
-    color: #D3B167;
+    color: #d3b167;
   }
 
   .btnReservar2 {
-    background: #D3B167;
+    background: #d3b167;
     border: none;
     padding: 10px 60px;
     color: white;
     cursor: pointer;
+  }
+
+  .btnReservar2:active {
+    background: #d3b167;
+    border: none;
+    padding: 10px 60px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btnReservar2:hover {
+    background: #bb9c57;
+    border: none;
+    padding: 10px 60px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .slider {
@@ -533,6 +558,17 @@ iframe {
   }
 }
 
+@media (max-width: 600px) {
+  .containerSuite {
+    max-width: 90%;
+  }
+
+  .btnVoltar {
+    margin-top: -10%;
+    margin-bottom: 20px;
+  }
+}
+
 /* Modal Imagens ----------------------------------------------------------------------------------------*/
 
 #myImg {
@@ -541,7 +577,9 @@ iframe {
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+  opacity: 0.7;
+}
 
 #myImg2 {
   border-radius: 5px;
@@ -549,7 +587,9 @@ iframe {
   transition: 0.3s;
 }
 
-#myImg2:hover {opacity: 0.7;}
+#myImg2:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
@@ -562,8 +602,8 @@ iframe {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: none; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -574,7 +614,8 @@ iframe {
 }
 
 /* Caption of Modal Image */
-#caption, #caption2 {
+#caption,
+#caption2 {
   margin: auto;
   display: block;
   width: 80%;
@@ -586,7 +627,9 @@ iframe {
 }
 
 /* Add Animation */
-.modal-content, #caption, #caption2 {  
+.modal-content,
+#caption,
+#caption2 {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -594,13 +637,21 @@ iframe {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
@@ -639,7 +690,7 @@ iframe {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
