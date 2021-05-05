@@ -119,7 +119,7 @@
         Incluso café da manhã e almoço.
       </p>
       <p class="textPreco3.1">
-        Jantar temos um restaurante e na região temos
+        Nós temos um restaurante interno e a região possui
         restaurantes famosos, com renomados chefes de
         5 estrelas michelin.
       </p>
@@ -156,7 +156,7 @@
         Incluso café da manhã e almoço.
       </p>
       <p class="textPreco3.1">
-        Jantar temos um restaurante e na região temos
+        Nós temos um restaurante interno e a região possui
         restaurantes famosos, com renomados chefes de
         5 estrelas michelin.
       </p>
@@ -198,7 +198,7 @@
         Incluso café da manhã e almoço.
       </p>
       <p class="textPreco3.1">
-        Jantar temos um restaurante e na região temos
+        Nós temos um restaurante interno e a região possui
         restaurantes famosos, com renomados chefes de
         5 estrelas michelin.
       </p>
@@ -230,17 +230,17 @@
 
         <p class="textCult2">
 
-          Nascido e criado em uma família hindu no litoral de Guzerate, oeste da Índia, e formado em direito 
-          no Inner Temple, Londres, Gandhi empregou pela primeira vez a desobediência civil não-violenta como 
-          advogado expatriado na África do Sul, na luta da comunidade indígena pelos direitos civis. Após seu 
-          retorno à Índia em 1915, ele começou a organizar camponeses, agricultores e trabalhadores urbanos 
-          para protestar contra o imposto sobre a terra e a discriminação excessiva. Assumindo a liderança do 
-          Congresso Nacional Indiano em 1921, Gandhi liderou campanhas nacionais para várias causas sociais e 
-          para alcançar o Swaraj ou o autogoverno. Gandhi levou os indianos a desafiar o imposto salino cobrado 
-          pelos ingleses com a Marcha do Sal, de 400 km, em 1930, e mais tarde pedindo aos britânicos que 
-          abandonassem a Índia em 1942. Ele foi preso por muitos anos, em várias ocasiões, na África do Sul e 
-          na Índia. Vivia modestamente em uma comunidade residencial autossuficiente e usava o dhoti e o xale 
-          indiano tradicional, entrelaçados com fios feitos à mão em um charkha. Comia comida vegetariana 
+          Nascido e criado em uma família hindu no litoral de Guzerate, oeste da Índia, e formado em direito
+          no Inner Temple, Londres, Gandhi empregou pela primeira vez a desobediência civil não-violenta como
+          advogado expatriado na África do Sul, na luta da comunidade indígena pelos direitos civis. Após seu
+          retorno à Índia em 1915, ele começou a organizar camponeses, agricultores e trabalhadores urbanos
+          para protestar contra o imposto sobre a terra e a discriminação excessiva. Assumindo a liderança do
+          Congresso Nacional Indiano em 1921, Gandhi liderou campanhas nacionais para várias causas sociais e
+          para alcançar o Swaraj ou o autogoverno. Gandhi levou os indianos a desafiar o imposto salino cobrado
+          pelos ingleses com a Marcha do Sal, de 400 km, em 1930, e mais tarde pedindo aos britânicos que
+          abandonassem a Índia em 1942. Ele foi preso por muitos anos, em várias ocasiões, na África do Sul e
+          na Índia. Vivia modestamente em uma comunidade residencial autossuficiente e usava o dhoti e o xale
+          indiano tradicional, entrelaçados com fios feitos à mão em um charkha. Comia comida vegetariana
           simples e também realizou longos jejuns como um meio de auto-purificação e protesto político.
 
         </p>
