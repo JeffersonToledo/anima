@@ -1,6 +1,5 @@
-
-<?php 
-ini_set('display_errors', 0 );
+<?php
+ini_set('display_errors', 0);
 error_reporting(0);
 ?>
 
@@ -8,11 +7,11 @@ error_reporting(0);
 
 session_start();
 
-if($_COOKIE['usuario']) {
+if ($_COOKIE['usuario']) {
     $_SESSION['usuario'] = $_COOKIE['usuario'];
 }
 
-if(!$_SESSION['usuario']){
+if (!$_SESSION['usuario']) {
     header('location: index.php');
 }
 
@@ -55,7 +54,7 @@ if(!$_SESSION['usuario']){
 
     if ($resultado->num_rows > 0) {
 
-        while($row = $resultado->fetch_assoc()) {
+        while ($row = $resultado->fetch_assoc()) {
 
             $registros[] = $row;
         }
@@ -63,16 +62,16 @@ if(!$_SESSION['usuario']){
         echo "Erro: " . $conexao->error;
     }
 
-    if($_GET['excluir']) {
+    if ($_GET['excluir']) {
 
         echo $_GET['exluir'];
 
-        $excluirSQL = "DELETE FROM cadastro WHERE id = ?"; // Isso que torna seguro para um hacker não colocar um inget p/ excluir as tabelas
-        $stmt = $conexao->prepare($excluirSQL); // também proteção e o resto de baixo também.
+        $excluirSQL = "DELETE FROM cadastro WHERE id = ?";
+        $stmt = $conexao->prepare($excluirSQL);
         $stmt->bind_param("i", $_GET['excluir']);
         $stmt->execute();
     }
-    
+
 
     // print_r($registros);
 
@@ -158,17 +157,17 @@ if(!$_SESSION['usuario']){
                     <td><?= $registro['suite'] ?></td>
 
                     <td>
-                
-                    <a href="http://localhost/anima/clientesHotel.php?excluir=<?= $registro['id'] ?>"class="btn btn-danger">
-                    
-                        Excluir
-                    
-                    </a>
-                
-                </td>
+
+                        <a href="http://localhost/mahal/clientesHotel.php?excluir=<?= $registro['id'] ?>" class="btn btn-danger">
+
+                            Excluir
+
+                        </a>
+
+                    </td>
 
                 </tr>
-                
+
 
             <?php endforeach ?>
 
@@ -177,7 +176,8 @@ if(!$_SESSION['usuario']){
     </table>
 
     <style>
-        th, td {
+        th,
+        td {
             text-align: center;
         }
     </style>

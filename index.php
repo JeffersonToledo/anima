@@ -42,7 +42,7 @@
   <section class="container container2">
     <h2>Hotel Mahal</h2>
 
-      <i class="spa fas fa-2x fa-spa"></i>
+    <i class="spa fas fa-2x fa-spa"></i>
 
     <h4>Conheça nossos quartos</h4>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -88,7 +88,7 @@
     </div>
   </section>
 
-<!-- Modo App -------------------------------------------------------------------------------------------------------- -->
+  <!-- Modo App -------------------------------------------------------------------------------------------------------- -->
 
   <div class="modoApp">
 
@@ -208,7 +208,7 @@
     </div>
 
   </div>
-<!-- Fim App ---------------------------------------------------------------------------------------------------------------- -->
+  <!-- Fim App ---------------------------------------------------------------------------------------------------------------- -->
 
   <div class="transicao transicaoApp">
 
@@ -252,9 +252,13 @@
     </div>
 
     <div class="link">
-      <p class="information">
-        Mais Informações →
-      </p>
+      <a href="https://pt.wikipedia.org/wiki/Mahatma_Gandhi" target="_blank">
+
+        <p class="information">
+          Mais Informações →
+        </p>
+
+      </a>
     </div>
 
   </section>
@@ -271,13 +275,13 @@
 
         <p class="textCult">
 
-        <iframe src="./holi.html" scrolling="no" name="icons" height="auto" width="100%" title="Iframe Example"></iframe>
+          <iframe src="./holi.html" scrolling="no" name="icons" height="auto" width="100%" title="Iframe Example"></iframe>
 
         </p>
 
       </div>
       <div class="icons">
-        
+
         <a href="./holi.html" target="icons"><i class="fas fa-glass-cheers"></i></a>
         <a href="./religion.html" target="icons"><i class="fas fa-hamsa"></i></a>
         <a href="./comida.html" target="icons"><i class="fas fa-pepper-hot"></i></a>
@@ -289,9 +293,13 @@
     </div>
 
     <div class="enfeites">
-      <p class="information2">
-        Mais Informações →
-      </p>
+      <a href="https://pt.wikipedia.org/wiki/Cultura_da_%C3%8Dndia" target="_blank">
+
+        <p class="information2">
+          Mais Informações →
+        </p>
+
+      </a>
     </div>
 
   </section>
@@ -401,77 +409,77 @@
   </div>
 
   <!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Hotel Mahal</h5>
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Hotel Mahal</h5>
 
-        <p>
-          Caro cliente, é com grande alegria que agradecemos por depositar sua confiança em nosso 
-          trabalho e profissionalismo. Nos empenhamos ao máximo para alcançar a qualidade que você 
-          procura e é uma grande motivação ter a aprovação de clientes especiais como você.
-        </p>
+          <p>
+            Caro cliente, é com grande alegria que agradecemos por depositar sua confiança em nosso
+            trabalho e profissionalismo. Nos empenhamos ao máximo para alcançar a qualidade que você
+            procura e é uma grande motivação ter a aprovação de clientes especiais como você.
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark">Hotéis</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Lugares</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Turismo</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Fotos</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Rede de Hotéis</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-dark">Mahal</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Indian</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Mahtama</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Shiva</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-dark">Hotéis</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Lugares</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Turismo</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Fotos</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Rede de Hotéis</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="text-dark">Mahal</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Indian</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Mahtama</a>
-          </li>
-          <li>
-            <a href="#!" class="text-dark">Shiva</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
+      <!--Grid row-->
     </div>
-    <!--Grid row-->
-  </div>
-  <!-- Grid container -->
+    <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">hotelmahal.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">hotelmahal.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

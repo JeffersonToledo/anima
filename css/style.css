@@ -316,14 +316,17 @@ iframe {
   margin-right: 5%;
   position: relative;
   cursor: pointer;
+  text-decoration:none; 
 }
 
 .information:hover {
   color: orange;
+  text-decoration:none;
 }
 
-.information2:hover {
+.information2:hover, a:link {
   color: #118806;
+  text-decoration:none;
 }
 
 .display {

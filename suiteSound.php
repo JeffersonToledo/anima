@@ -1,5 +1,5 @@
-<?php 
-ini_set('display_errors', 0 );
+<?php
+ini_set('display_errors', 0);
 error_reporting(0);
 ?>
 
@@ -75,7 +75,7 @@ if (count($_POST)) {
 
 
 
-        $stmt->bind_param("ssssiisssi", ...$params); // s - string (nome, data, email, site), i - inteiro (filhos).
+        $stmt->bind_param("ssssiisssi", ...$params);
 
         if ($stmt->execute()) {
 
@@ -102,7 +102,7 @@ if (count($_POST)) {
     <script src="https://kit.fontawesome.com/512b1b950e.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Suíte Palace</title>
+    <title>Suíte Sound</title>
 </head>
 
 <body>
