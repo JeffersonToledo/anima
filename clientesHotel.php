@@ -94,93 +94,96 @@ if (!$_SESSION['usuario']) {
 
     </nav>
 
-    <table class="table table-hover table-striped">
+    <div class="table-responsive-md">
 
-        <thead>
+        <table class="table table-hover table-striped">
 
-            <th>Código</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>nascimento</th>
-            <th>Email</th>
-            <th>Filhos</th>
-            <th>Pessoas</th>
-            <th>Data Inicial</th>
-            <th>Data Final</th>
-            <th>Celular</th>
-            <th>Quartos</th>
-            <th>Suíte</th>
+            <thead>
 
-        </thead>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>nascimento</th>
+                <th>Email</th>
+                <th>Filhos</th>
+                <th>Pessoas</th>
+                <th>Data Inicial</th>
+                <th>Data Final</th>
+                <th>Celular</th>
+                <th>Quartos</th>
+                <th>Suíte</th>
 
-        <tbody>
+            </thead>
 
-            <?php foreach ($registros as $registro) : ?>
+            <tbody>
 
-                <tr>
+                <?php foreach ($registros as $registro) : ?>
 
-                    <td><?= $registro['id'] ?></td>
-                    <td><?= $registro['nome'] ?></td>
-                    <td><?= $registro['cpf'] ?></td>
-                    <td>
+                    <tr>
 
-                        <?=
+                        <td><?= $registro['id'] ?></td>
+                        <td><?= $registro['nome'] ?></td>
+                        <td><?= $registro['cpf'] ?></td>
+                        <td>
 
-                        date('d/m/Y', strtotime($registro['nascimento']));
+                            <?=
 
-                        ?>
+                            date('d/m/Y', strtotime($registro['nascimento']));
 
-                    </td>
-                    <td><?= $registro['email'] ?></td>
-                    <td><?= $registro['filhos'] ?></td>
-                    <td><?= $registro['pessoas'] ?></td>
-                    <td>
+                            ?>
 
-                        <?=
+                        </td>
+                        <td><?= $registro['email'] ?></td>
+                        <td><?= $registro['filhos'] ?></td>
+                        <td><?= $registro['pessoas'] ?></td>
+                        <td>
 
-                        date('d/m/Y', strtotime($registro['data']));
+                            <?=
 
-                        ?>
+                            date('d/m/Y', strtotime($registro['data']));
 
-                    </td>
-                    <td>
+                            ?>
 
-                        <?=
+                        </td>
+                        <td>
 
-                        date('d/m/Y', strtotime($registro['data2']));
+                            <?=
 
-                        ?>
+                            date('d/m/Y', strtotime($registro['data2']));
 
-                    </td>
-                    <td><?= $registro['celular'] ?></td>
-                    <td><?= $registro['quartos'] ?></td>
-                    <td><?= $registro['suite'] ?></td>
+                            ?>
 
-                    <td>
+                        </td>
+                        <td><?= $registro['celular'] ?></td>
+                        <td><?= $registro['quartos'] ?></td>
+                        <td><?= $registro['suite'] ?></td>
 
-                        <a href="http://localhost/mahal/clientesHotel.php?excluir=<?= $registro['id'] ?>" class="btn btn-danger">
+                        <td>
 
-                            Excluir
+                            <a href="http://localhost/mahal/clientesHotel.php?excluir=<?= $registro['id'] ?>" class="btn btn-danger">
 
-                        </a>
+                                Excluir
 
-                    </td>
+                            </a>
 
-                </tr>
+                        </td>
+
+                    </tr>
+    </div>
 
 
-            <?php endforeach ?>
+<?php endforeach ?>
 
-        </tbody>
+</tbody>
 
-    </table>
+</table>
 
-    <style>
-        th,
-        td {
-            text-align: center;
-        }
-    </style>
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
 
 
 </body>
