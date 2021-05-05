@@ -11,9 +11,14 @@ if (count($_POST)) {
 
     $erros = [];
 
-    if (isset($dados['nome']) === "") {
+    if (trim($dados['nome']) === "") {
 
         $erros['nome'] = 'Nome é obrigatório';
+    }
+
+    if (trim($dados['cpf']) === "") {
+
+        $erros['cpf'] = 'CPF é obrigatório';
     }
 
 
