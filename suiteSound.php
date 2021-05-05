@@ -16,12 +16,17 @@ if (count($_POST)) {
         $erros['nome'] = 'Nome é obrigatório';
     }
 
+    if (trim($dados['cpf']) === "") {
+
+        $erros['cpf'] = 'CPF é obrigatório';
+    }
+
 
     if (!filter_var($dados['email'], FILTER_VALIDATE_EMAIL)) {
         $erros['email'] = 'Email inválido';
     }
 
-    if ($_POST['nascimento'] === '') {
+    if (isset($_POST['nascimento']) === '') {
 
         $erros['nascimento'] = 'Preencha uma data';
     } else {
@@ -70,7 +75,7 @@ if (count($_POST)) {
 
 
 
-        $stmt->bind_param("ssssiisssi", ...$params);
+        $stmt->bind_param("ssssiisssi", ...$params); // s - string (nome, data, email, site), i - inteiro (filhos).
 
         if ($stmt->execute()) {
 
@@ -83,6 +88,8 @@ if (count($_POST)) {
 }
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -112,125 +119,129 @@ if (count($_POST)) {
 
         </div>
 
-        <div class="form-row">
+        <div class="formHotel">
 
-            <div class="col-md-6">
+            <form action="#" method="post" id="myForm">
 
-                <label for="nome">Nome</label>
-                <input class="form-control <?= $erros['nome'] ? 'is-invalid' : '' ?>" type="text" name="nome" id="nome" placeholder="Nome" value="<?= $_POST['nome'] ?>">
+                <div class="form-row">
 
-                <div class="invalid-feedback"><?= $erros['nome'] ?></div>
+                    <div class="col-md-6">
 
-            </div>
+                        <label for="nome">Nome</label>
+                        <input class="form-control <?= $erros['nome'] ? 'is-invalid' : '' ?>" type="text" name="nome" id="nome" placeholder="Nome" value="<?= $_POST['nome'] ?>">
 
-            <div class="col-md-4">
+                        <div class="invalid-feedback"><?= $erros['nome'] ?></div>
 
-                <label for="cpf">CPF</label>
-                <input class="form-control <?= $erros['cpf'] ? 'is-invalid' : '' ?>" type="text" name="cpf" id="cpf" placeholder="CPF - Somente os números" value="<?= $_POST['cpf'] ?>">
+                    </div>
 
-                <div class="invalid-feedback"><?= $erros['cpf'] ?></div>
+                    <div class="col-md-4">
 
-            </div>
+                        <label for="cpf">CPF</label>
+                        <input class="form-control <?= $erros['cpf'] ? 'is-invalid' : '' ?>" type="text" name="cpf" id="cpf" placeholder="CPF - Somente os números" value="<?= $_POST['cpf'] ?>">
 
-            <div class="col-md-2">
+                        <div class="invalid-feedback"><?= $erros['cpf'] ?></div>
 
-                <label for="nascimento">Nascimento</label>
-                <input class="form-control <?= $erros['nascimento'] ? 'is-invalid' : '' ?>" type="date" name="nascimento" id="nascimento" placeholder="Nascimento" value="<?= $_POST['nascimento'] ?>">
+                    </div>
 
-                <div class="invalid-feedback"><?= $erros['nascimento'] ?></div>
+                    <div class="col-md-2">
 
-            </div>
+                        <label for="nascimento">Nascimento</label>
+                        <input class="form-control <?= $erros['nascimento'] ? 'is-invalid' : '' ?>" type="date" name="nascimento" id="nascimento" placeholder="Nascimento" value="<?= $_POST['nascimento'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['nascimento'] ?></div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="col-md-4">
+
+                        <label for="email">E-mail</label>
+                        <input class="form-control <?= $erros['email'] ? 'is-invalid' : '' ?>" type="text" name="email" id="email" placeholder="E-mail" value="<?= $_POST['email'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['email'] ?></div>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <label for="filhos">Filhos</label>
+                        <input class="form-control <?= $erros['filhos'] ? 'is-invalid' : '' ?>" type="number" name="filhos" id="filhos" placeholder="Filhos" value="<?= $_POST['filhos'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['filhos'] ?></div>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <label for="pessoas">Pessoas</label>
+                        <input class="form-control <?= $erros['pessoas'] ? 'is-invalid' : '' ?>" type="number" name="pessoas" id="pessoas" placeholder="Pessoas" value="<?= $_POST['pessoas'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['pessoas'] ?></div>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <label for="data">Data Inicial</label>
+                        <input class="form-control <?= $erros['data'] ? 'is-invalid' : '' ?>" type="date" name="data" id="data" placeholder="Data" value="<?= $_POST['data'] ?>">
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <label for="data2">Data Final</label>
+                        <input class="form-control <?= $erros['data2'] ? 'is-invalid' : '' ?>" type="date" name="data2" id="data2" placeholder="Data Final" value="<?= $_POST['data2'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['data2'] ?></div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="col-md-3">
+
+                        <label for="celular">Celular</label>
+
+                        <input class="form-control <?= $erros['celular'] ? 'is-invalid' : '' ?>" type="text" name="celular" id="celular" placeholder="Celular - Somente os números" value="<?= $_POST['celular'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['celular'] ?></div>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+
+                        <label for="quartos">Quartos</label>
+                        <input class="form-control <?= $erros['quartos'] ? 'is-invalid' : '' ?>" type="number" name="quartos" id="quartos" placeholder="Qts de quartos" value="<?= $_POST['quartos'] ?>">
+
+                        <div class="invalid-feedback"><?= $erros['quartos'] ?></div>
+
+                    </div>
+
+                    <div class="col-md-2 suite">
+                        <input class="form-control" type="text" disabled placeholder="Suíte Sound">
+                    </div>
+
+
+                </div>
+
+                <div class="form-row">
+
+                    <input class="btnSuiteReservar" type="submit" value="Reservar" />
+
+                </div>
+
+            </form>
+
+            <a class="btnVoltar btn btn-danger" href="index.php">Voltar</a>
+
 
         </div>
-
-        <div class="form-row">
-
-            <div class="col-md-4">
-
-                <label for="email">E-mail</label>
-                <input class="form-control <?= $erros['email'] ? 'is-invalid' : '' ?>" type="text" name="email" id="email" placeholder="E-mail" value="<?= $_POST['email'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['email'] ?></div>
-
-            </div>
-
-            <div class="col-md-2">
-
-                <label for="filhos">Filhos</label>
-                <input class="form-control <?= $erros['filhos'] ? 'is-invalid' : '' ?>" type="number" name="filhos" id="filhos" placeholder="Filhos" value="<?= $_POST['filhos'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['filhos'] ?></div>
-
-            </div>
-
-            <div class="col-md-2">
-
-                <label for="pessoas">Pessoas</label>
-                <input class="form-control <?= $erros['pessoas'] ? 'is-invalid' : '' ?>" type="number" name="pessoas" id="pessoas" placeholder="Pessoas" value="<?= $_POST['pessoas'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['pessoas'] ?></div>
-
-            </div>
-
-            <div class="col-md-2">
-
-                <label for="data">Data Inicial</label>
-                <input class="form-control <?= $erros['data'] ? 'is-invalid' : '' ?>" type="date" name="data" id="data" placeholder="Data" value="<?= $_POST['data'] ?>">
-
-            </div>
-
-            <div class="col-md-2">
-
-                <label for="data2">Data Final</label>
-                <input class="form-control <?= $erros['data2'] ? 'is-invalid' : '' ?>" type="date" name="data2" id="data2" placeholder="Data Final" value="<?= $_POST['data2'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['data2'] ?></div>
-
-            </div>
-
-        </div>
-
-        <div class="form-row">
-
-            <div class="col-md-3">
-
-                <label for="celular">Celular</label>
-
-                <input class="form-control <?= $erros['celular'] ? 'is-invalid' : '' ?>" type="text" name="celular" id="celular" placeholder="Celular - Somente os números" value="<?= $_POST['celular'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['celular'] ?></div>
-
-            </div>
-
-
-            <div class="col-md-3">
-
-                <label for="quartos">Quartos</label>
-                <input class="form-control <?= $erros['quartos'] ? 'is-invalid' : '' ?>" type="number" name="quartos" id="quartos" placeholder="Qts de quartos" value="<?= $_POST['quartos'] ?>">
-
-                <div class="invalid-feedback"><?= $erros['quartos'] ?></div>
-
-            </div>
-
-            <div class="col-md-2 suite">
-                <input class="form-control" type="text" disabled placeholder="Suíte Sound">
-            </div>
-
-
-        </div>
-
-        <div class="form-row">
-
-            <input class="btnSuiteReservar" type="submit" value="Reservar" />
-
-        </div>
-
-        </form>
-
-        <a class="btnVoltar btn btn-danger" href="index.php">Voltar</a>
-
-
-    </div>
 
     </div>
 
