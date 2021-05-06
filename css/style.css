@@ -190,6 +190,8 @@ body {
 
 .textGandhi {
   grid-area: textGandhi;
+  position: absolute;
+  left: 600px;
 }
 
 .link {
@@ -216,7 +218,8 @@ body {
 
 .gandhiImg {
   height: 100vh;
-  max-width: 120%;
+  width: 130%;
+  padding-top: 150px;
 }
 
 .culture h1 {
@@ -229,12 +232,12 @@ body {
 .culture2 h1 {
   font-family: samarkan;
   font-size: 100px;
-  margin-top: 40%;
+  margin-top: 30%;
   color: white;
 }
 
 .cultureText {
-  max-width: 400px;
+  max-width: 300px;
   margin-top: 20px;
 }
 
@@ -249,7 +252,9 @@ body {
   color: white;
   font-family: lato;
   overflow-y: scroll;
-  height: 245px;
+  height: 230px;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
 .textCult2::-webkit-scrollbar {
@@ -339,6 +344,81 @@ iframe {
   text-align: center;
   margin: 80px auto;
   color: orange;
+}
+
+@media (min-width: 1200px) {
+  .textGandhi {
+    left: 700px;
+  }
+
+  .cultureText {
+    max-width: 60%;
+    margin-top: 20px;
+  }
+
+  .textCult2 {
+    color: white;
+    font-family: lato;
+    overflow-y: scroll;
+    height: 240px;
+    font-size: 16px;
+  }
+
+  .gandhiImg {
+    height: 100vh;
+    width: 150%;
+    padding-top: 120px;
+  }
+  .cultureAjuste {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .textGandhi {
+    left: 600px;
+  }
+
+  .culture h1 {
+    font-family: samarkan;
+    font-size: 100px;
+    margin-top: 45%;
+    color: white;
+  }
+
+  .culture2 h1 {
+    font-family: samarkan;
+    font-size: 100px;
+    margin-top: 25%;
+    color: white;
+  }
+
+  .cultureText {
+    max-width: 60%;
+    margin-top: 20px;
+  }
+
+  .textCult {
+    color: white;
+    font-family: lato;
+    overflow: hidden;
+    height: 150px;
+  }
+
+  .textCult2 {
+    color: white;
+    font-family: lato;
+    overflow-y: scroll;
+    height: 240px;
+    font-size: 16px;
+  }
+
+  .gandhiImg {
+    height: 100vh;
+    width: 120%;
+    padding-top: 120px;
+  }
 }
 
 /* Forms reserva ----------------------------------------------------------------------------*/
@@ -433,7 +513,7 @@ iframe {
 
 /* Modo App ---------------------------------------------------------------------------------*/
 
-@media (max-width: 780px) {
+@media (max-width: 1300px) {
   .head {
     background: url(../img/tajMahalApp.jpg) center no-repeat;
   }
@@ -443,7 +523,7 @@ iframe {
   display: none;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1300px) {
   .modoApp {
     display: grid;
     max-width: 100%;

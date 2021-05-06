@@ -14,7 +14,7 @@
 
 <body>
 
-  <div class="head">
+  <div class="container head">
     <div class="login">
 
       <i class="fontLogin fas fa-portrait fa-2x"></i>
@@ -268,7 +268,7 @@
 
     <div class="culture">
       <h1>Cultura</h1>
-      <div class="cultureText">
+      <div class="cultureText cultureAjuste">
 
         <p class="textCult">
 
@@ -415,7 +415,7 @@
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase">Hotel Mahal</h5>
 
-          <p>
+          <p class="text-justify">
             Caro cliente, é com grande alegria que agradecemos por depositar sua confiança em nosso
             trabalho e profissionalismo. Nos empenhamos ao máximo para alcançar a qualidade que você
             procura e é uma grande motivação ter a aprovação de clientes especiais como você.
